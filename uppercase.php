@@ -1,5 +1,5 @@
 <?php 
-class Uppercase implements ChangeCase
+class Uppercase extends ChangeCase
 {
 	public function uppercase($inputInform,$convertTypes)
 	{
@@ -33,4 +33,3 @@ class Uppercase implements ChangeCase
 	}
 
 }
-?>

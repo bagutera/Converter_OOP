@@ -1,29 +1,34 @@
 <?php
-interface ChangeCase 
+abstract class ChangeCase 
 {
-	if (!empty($_GET['inputInform']))
-	$inputInform = $_GET['inputInform'];
+	protected $inputInform;
+	protected $convertTypes;
 
-	if (!empty($_GET['convertTypes']))
-	$convertTypes = $_GET['convertTypes'];
-	
-	$inputInform = htmlspecialchars($_GET["inputInform"], ENT_QUOTES);
-
-	changeCase($inputInform,$convertTypes)
+	public function __construct()
 	{
-	
-		$case1 = new FirstCapt();
-		$case1->firstCapt();
+		if (!empty($_GET['inputInform'])) {
+			$this->inputInform = htmlspecialchars($_GET['inputInform'], ENT_QUOTES);
+		}
 
-		$case2 = new LowerCase();
-		$case2->lowerCase();
-
-		$case3 = new Uppercase();
-		$case3->uppercase();
+		if (!empty($_GET['convertTypes'])) {
+			$this->convertTypes = $_GET['convertTypes'];
+		}
 	}
-	
+
+	abstract public function firstCapt();
+	abstract public function lowerCase();
+	abstract public function uppercase();
 }
 
+
 // if (!empty($inputInform) && !empty($convertTypes))
-changeCase($inputInform,$convertTypes);
+// changeCase($inputInform,$convertTypes);
+		// $case1 = new FirstCapt();
+		// $case1->firstCapt();
+
+		// $case2 = new LowerCase();
+		// $case2->lowerCase();
+
+		// $case3 = new Uppercase();
+		// $case3->uppercase();
 

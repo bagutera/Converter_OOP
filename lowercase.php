@@ -1,5 +1,5 @@
 <?php 
-class LowerCase implements ChangeCase
+class LowerCase extends ChangeCase
 {
 	public function lowerCase($inputInform,$convertTypes)
 	{
@@ -32,4 +32,3 @@ class LowerCase implements ChangeCase
 		}
 	}
 }
-?>

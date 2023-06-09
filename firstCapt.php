@@ -1,7 +1,7 @@
 <?php
-class FirstCapt implements ChangeCase
+class FirstCapt extends ChangeCase
 {
-	public function firstCapt($inputInform,$convertTypes)
+	 public function firstCapt($inputInform,$convertTypes)
 	{
 		if ($convertTypes == "firstCapt")
 		{
@@ -32,5 +32,3 @@ class FirstCapt implements ChangeCase
 		}
 	}
 }
-
-?>
