@@ -19,13 +19,3 @@ abstract class ChangeCase
 	abstract public function lowerCase();
 	abstract public function uppercase();
 }
-
-		$case1 = new FirstCapt();
-		$case1->firstCapt();
-
-		$case2 = new LowerCase();
-		$case2->lowerCase();
-
-		$case3 = new Uppercase();
-		$case3->uppercase();
-
